@@ -1,37 +1,38 @@
-## Welcome to GitHub Pages
+## 学习Hibernate
 
-You can use the [editor on GitHub](https://github.com/tangyang0317/tangyang0317.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+学习Hibernate
+一.什么是Hibernate？
+     简单的一句话，hibernate是对jdbc进行封装的对象关系映射的持久层框架。
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+二.Hibernate核心：
+        
 
-```markdown
-Syntax highlighted code block
+     从上图可以看出，hibernate主要有六个对象：
+          hibernate.cfg.xml  -------->   hibernate的核心配置文件，配置数据源等操作；
+          object.hbm.xml   -------->对象与数据库表的映射关系配置文件；
+          configuration    -------->通过读取  hibernate.cfg.xml  ，拿到相应的配置信息，负责配置并启动Hibernate。
+          SessionFactory  -------->初始化hibernate;
+          Session   ---------->负责持久化数据对象的CRUD操作;
+          Transaction   -------->负责实物操作;
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+     注：configuration是一个启动间对象，一旦SessionFactory创建完成他就被丢弃。
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+三：Hibernate的优缺点：
 
-### Jekyll Themes
+     优点：符合java面向对象编程的思想，开发更加对象化，一般不需要编写sql语句，直接操作对象即可；
+               移植性强，代码大多具有可复用性；
+               轻量级的框架，不需要继承，不需要实现接口；
+               代码测试方便；
+               开发效率高，生产能力强；
+    
+     缺点：使用数据库特性的语句，很难将调优；
+               对大批量数据更新存在问题;
+               系统中存在大量攻击查询功能；
+               程序员会忘记SQL语法，越来越懒。
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/tangyang0317/tangyang0317.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
