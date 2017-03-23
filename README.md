@@ -1,12 +1,10 @@
 ## 学习Hibernate
-
-学习Hibernate
-一.什么是Hibernate？
+####一.什么是Hibernate？
      简单的一句话，hibernate是对jdbc进行封装的对象关系映射的持久层框架。
 
 
 
-二.Hibernate核心：
+####二.Hibernate核心：
         
 
      从上图可以看出，hibernate主要有六个对象：
@@ -23,7 +21,7 @@
 
 
 
-三：Hibernate的优缺点：
+####三：Hibernate的优缺点：
 
      优点：符合java面向对象编程的思想，开发更加对象化，一般不需要编写sql语句，直接操作对象即可；
                移植性强，代码大多具有可复用性；
